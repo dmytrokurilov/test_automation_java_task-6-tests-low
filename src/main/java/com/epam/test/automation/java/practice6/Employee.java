@@ -1,36 +1,40 @@
 package com.epam.test.automation.java.practice6;
 
 
+import java.math.BigDecimal;
+
 public class Employee {
     private final String name;
-    private double salary;
-    private double bonus;
+    private BigDecimal salary;
+    private BigDecimal bonus;
 
     public String getName() {
 
         return name;
     }
 
-    public double getSalary() {
+    public BigDecimal getSalary() {
 
-            return salary;
-        }
-
-    public void setSalary(double salary) {
-
-            this.salary = salary;
+        return salary;
     }
 
-    public Employee(String name, double salary) {
+    public void setSalary(BigDecimal salary) {
+
+        this.salary = salary;
+    }
+
+    public Employee(String name, BigDecimal salary) {
         this.name = name;
         this.salary = salary;
     }
 
-    public void setBonus(double bonus) {
+    public void setBonus(BigDecimal bonus) {
         this.bonus = bonus;
     }
 
-    public double toPay() {
-        return salary + bonus;
+    public BigDecimal toPay() {
+        BigDecimal result;
+        result = salary.add(bonus);
+        return result;
     }
 }

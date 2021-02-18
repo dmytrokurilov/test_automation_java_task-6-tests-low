@@ -1,6 +1,5 @@
 package com.epam.test.automation.java.practice6;
 
-
 import java.math.BigDecimal;
 
 public class Employee {
@@ -33,8 +32,8 @@ public class Employee {
     }
 
     public BigDecimal toPay() {
-        BigDecimal result;
-        result = salary.add(bonus);
-        return result;
+
+        return salary.add(bonus);
+
     }
 }

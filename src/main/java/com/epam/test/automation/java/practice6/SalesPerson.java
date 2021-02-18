@@ -10,15 +10,15 @@ public class SalesPerson extends Employee {
         this.percent = percent;
     }
 
-    public void setBonus(BigDecimal bonus) {
+    public void getBonus(BigDecimal bonus) {
         if (percent <= 100) {
-            super.setBonus(bonus);
+            super.getBonus(bonus);
         }
         if (percent > 100 && percent <= 200) {
-            super.setBonus(bonus.multiply(BigDecimal.valueOf(2)));
+            super.getBonus(bonus.multiply(BigDecimal.valueOf(2)));
         }
         if (percent > 200) {
-            super.setBonus(bonus.multiply(BigDecimal.valueOf(3)));
+            super.getBonus(bonus.multiply(BigDecimal.valueOf(3)));
         }
     }
 }

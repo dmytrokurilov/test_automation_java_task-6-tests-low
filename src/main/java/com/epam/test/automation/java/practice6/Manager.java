@@ -10,15 +10,15 @@ public class Manager extends Employee {
         quantity = clientAmount;
     }
 
-    public void setBonus(BigDecimal bonus) {
+    public void getBonus(BigDecimal bonus) {
         if (quantity <= 100) {
-            super.setBonus(bonus);
+            super.getBonus(bonus);
         }
         if (quantity > 100 && quantity <= 150) {
-            super.setBonus(bonus.add(BigDecimal.valueOf(500)));
+            super.getBonus(bonus.add(BigDecimal.valueOf(500)));
         }
         if (quantity > 150) {
-            super.setBonus(bonus.add(BigDecimal.valueOf(1000)));
+            super.getBonus(bonus.add(BigDecimal.valueOf(1000)));
         }
     }
 }

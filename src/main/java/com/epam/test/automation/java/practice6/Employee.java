@@ -30,6 +30,7 @@ public class Employee {
     public BigDecimal getBonus() {
         return bonus;
     }
+
     public void setBonus(BigDecimal bonus) {
         this.bonus = bonus;
     }

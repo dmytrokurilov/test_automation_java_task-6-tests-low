@@ -23,4 +23,3 @@ public class SalesPerson extends Employee {
         }
     }
 }
-

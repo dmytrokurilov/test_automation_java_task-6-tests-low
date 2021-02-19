@@ -10,6 +10,7 @@ public class Manager extends Employee {
         quantity = clientAmount;
     }
 
+    @Override
     public void setBonus(BigDecimal bonus) {
         if (quantity <= 100) {
             super.setBonus(bonus);

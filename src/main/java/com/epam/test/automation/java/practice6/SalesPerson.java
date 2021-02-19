@@ -10,6 +10,7 @@ public class SalesPerson extends Employee {
         this.percent = percent;
     }
 
+    @Override
     public void setBonus(BigDecimal bonus) {
         if (percent <= 100) {
             super.setBonus(bonus);

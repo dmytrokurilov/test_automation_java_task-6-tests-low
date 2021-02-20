@@ -19,13 +19,13 @@ public class Manager extends Employee {
             throw new IllegalArgumentException();
         }
         if (quantity <= 100) {
-            super.setBonus(bonus);
+            setBonus(bonus);
         }
         if (quantity > 100 && quantity <= 150) {
-            super.setBonus(bonus.add(BigDecimal.valueOf(500)));
+            setBonus(bonus.add(BigDecimal.valueOf(500)));
         }
         if (quantity > 150) {
-            super.setBonus(bonus.add(BigDecimal.valueOf(1000)));
+            setBonus(bonus.add(BigDecimal.valueOf(1000)));
         }
 
     }

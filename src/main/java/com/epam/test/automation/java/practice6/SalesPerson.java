@@ -20,13 +20,13 @@ public class SalesPerson extends Employee {
         }
 
         if (percent <= 100) {
-            super.setBonus(bonus);
+            this.setBonus(bonus);
         }
         if (percent > 100 && percent <= 200) {
-            super.setBonus(bonus.multiply(BigDecimal.valueOf(2)));
+            this.setBonus(bonus.multiply(BigDecimal.valueOf(2)));
         }
         if (percent > 200) {
-            super.setBonus(bonus.multiply(BigDecimal.valueOf(3)));
+            this.setBonus(bonus.multiply(BigDecimal.valueOf(3)));
         }
 
     }

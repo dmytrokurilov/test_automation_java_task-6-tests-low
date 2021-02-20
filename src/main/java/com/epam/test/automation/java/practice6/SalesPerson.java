@@ -12,6 +12,13 @@ public class SalesPerson extends Employee {
 
     @Override
     public void setBonus(BigDecimal bonus) {
+        if (bonus == null) {
+            throw new IllegalArgumentException();
+        }
+        if (bonus.compareTo(BigDecimal.ZERO) < 0) {
+            throw new IllegalArgumentException();
+        }
+
         if (percent <= 100) {
             super.setBonus(bonus);
         }

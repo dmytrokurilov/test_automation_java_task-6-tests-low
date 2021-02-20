@@ -12,6 +12,9 @@ public class Manager extends Employee {
 
     @Override
     public void setBonus(BigDecimal bonus) {
+        if (bonus.compareTo(BigDecimal.ZERO) < 0) {
+            throw new IllegalArgumentException();
+        }
         if (quantity <= 100) {
             super.setBonus(bonus);
         }
@@ -21,5 +24,6 @@ public class Manager extends Employee {
         if (quantity > 150) {
             super.setBonus(bonus.add(BigDecimal.valueOf(1000)));
         }
+
     }
 }

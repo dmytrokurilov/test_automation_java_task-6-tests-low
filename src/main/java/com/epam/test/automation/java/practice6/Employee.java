@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 public abstract class Employee {
     private final String name;
     private BigDecimal salary;
-    private BigDecimal bonus;
+    protected BigDecimal bonus;
 
     public String getName() {
 

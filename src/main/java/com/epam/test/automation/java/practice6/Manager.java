@@ -12,20 +12,17 @@ public class Manager extends Employee {
 
     @Override
     public void setBonus(BigDecimal bonus) {
-        if (bonus == null) {
+        if (quantity <= 0 || bonus == null || bonus.compareTo(BigDecimal.ZERO) <= 0) {
             throw new IllegalArgumentException();
         }
-        if (bonus.compareTo(BigDecimal.ZERO) < 0) {
-            throw new IllegalArgumentException();
+        else if (quantity > 100 && quantity <=150) {
+            this.bonus = bonus.add(BigDecimal.valueOf(500));
         }
-        if (quantity <= 100) {
-            this.setBonus(bonus);
+        else if (quantity > 150) {
+            this.bonus = bonus.add(BigDecimal.valueOf(1000));
         }
-        if (quantity > 100 && quantity <= 150) {
-            this.setBonus(bonus.add(BigDecimal.valueOf(500)));
-        }
-        if (quantity > 150) {
-            this.setBonus(bonus.add(BigDecimal.valueOf(1000)));
+        else {
+            this.bonus = bonus;
         }
 
     }
